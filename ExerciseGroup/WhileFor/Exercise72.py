@@ -1,17 +1,12 @@
-original_word = input('Enter a word to check if it is a palindrome: ')
-word = original_word.lower() 
-
-is_palindrome = True
-length = len(word)
-
-while length > 1 and is_palindrome:
-    if word[0] != word[length - 1]:
-        is_palindrome = False
+string = input("Enter string: ")
+first = 0 
+last = len(string) - 1
+while first < last:
+    if string[first] == string[last]:
+        first += 1
+        last -= 1
     else:
-        word = word[1:length - 1]
-        length -= 2
-
-if is_palindrome:
-    print(f"The word '{original_word}' is a palindrome.")
+        print("The string is not a palindrome.")
+        break
 else:
-    print(f"The word '{original_word}' is not a palindrome.")
+    print("The string is a palindrome.")
