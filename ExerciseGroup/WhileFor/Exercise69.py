@@ -1,4 +1,3 @@
-
 approximation = 3.0
 sign = 1.0
 
