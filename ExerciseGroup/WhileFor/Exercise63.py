@@ -1,4 +1,7 @@
-print('| Celsius | Fahrenheit |')
-for C in range(0, 101, 10):
-    F=(C*9)/5+32
-    print('|',C,'     | ',F,'     |')
+cel = 0
+far = (cel * 9/5) + 32
+print(f"Celcious\t<->\t     Fahrenheit")
+for i in range(100):    
+    print(f"{cel}\t\t<->\t\t{far}")    
+    cel += 1
+    far = (cel * 9/5) + 32
