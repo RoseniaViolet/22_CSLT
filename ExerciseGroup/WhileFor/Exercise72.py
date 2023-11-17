@@ -1,12 +1,9 @@
-string = input("Enter string: ")
-first = 0 
-last = len(string) - 1
-while first < last:
-    if string[first] == string[last]:
-        first += 1
-        last -= 1
-    else:
-        print("The string is not a palindrome.")
-        break
-else:
-    print("The string is a palindrome.")
+string= input('Enter a string:')
+reverse = string
+reverse_convert =''
+for i in string:
+    reverse_convert = i + reverse_convert
+if reverse == reverse_convert:
+    print(f'{string} is palindrome string')
+else :
+    print(f'{string} not is palindrome string')
