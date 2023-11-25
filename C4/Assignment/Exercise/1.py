@@ -4,15 +4,16 @@ def Nhap():
         n = int(input('n='))
     return n
 def Kiemtra(a):
-    for i in range(2, a+1):
-        if a % i == 0 and a != 2:
-            print(f'{a} khong la SNT')
-            break 
-    else:
-        print(f'{a} la SNT')
-    return a
+    for i in range(2, a):
+        if a % i == 0:
+            return False  # a is not prime
+    return True  # a is prime
 def Ketqua():
-    a = Nhap()
-    result = Kiemtra(a)
+    k = Nhap()
+    result = Kiemtra(k)
+    if result:
+        print(f'{k} la SNT')
+    else:
+        print(f'{k} khong la SNT')
 # Main code
 Ketqua()
