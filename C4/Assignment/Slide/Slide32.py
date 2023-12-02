@@ -1,8 +1,9 @@
-import random
+import random 
 
-def user_choice():
+def Player():
     choice = int(input('Human: '))
     while choice not in [0, 1, 2, 3]:
+        print('Vui long nhap lai')
         choice = int(input('Human: '))
     return choice
 
@@ -23,11 +24,9 @@ def determine_winner(user, computer):
 
 def play_game():
     while True:
-        user = user_choice()
-
+        user = Player()
         if user == 0:
             break 
-        
         computer = computer_choice()
         result = determine_winner(user, computer)
         print(result)
