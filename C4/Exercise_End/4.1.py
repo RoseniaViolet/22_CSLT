@@ -1,16 +1,16 @@
 def nhap():
     while True:
-        n = int(input())
-        if n > 0:
+        n = int(input('n='))
+        if n >= 0:
             return n
-def giaithua(n):
-    result = 1
-    for i in range(1,n+1):
-        result *= i
-    return result
-def inKQ(n,X): 
-    print(f'{n}!={X}')
-#maincode
-n = nhap()
-X = giaithua(n)
-inKQ(n,X)
+def inkq(n):
+    for i in range(2,n+1):
+        if i % 2 == 0:
+            print(f'{i} ',end='')
+while True:
+    n = nhap()
+    inkq(n)
+    print()
+    Tieptuc = input('Tiep tuc khong?')
+    if Tieptuc.upper == 'K':
+        break

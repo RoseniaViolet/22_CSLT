@@ -14,7 +14,7 @@
 # InKQ(so_chan)           
 def Nhap():
     return int(input('n='))
-def NhapVaDem():
+def NhapVaDem(n):
     Dem = 0
     print('Nhap 7 so nguyen:')
     for i in range(1,n+1):
