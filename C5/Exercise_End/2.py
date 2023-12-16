@@ -18,6 +18,6 @@ def Output(min, max):
 result = Input()
 if result is not None:
     L, n = result
-    sorted_list = Search(L)
-    min_val, max_val = sorted_list[0], sorted_list[-1]
-    Output(min_val, max_val)
+    L = Search(L)
+    min, max = L[0], L[-1]
+    Output(min, max)
