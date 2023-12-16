@@ -5,7 +5,7 @@ def nhap():
     for i in range(1,n+1):
          L.append(int(input()))
     return x,n,L
-def Bai3(L,x):
+def delete(L,x):
     i = 0
     while i < len(L):
         if L[i] == x:
@@ -14,4 +14,4 @@ def Bai3(L,x):
             i += 1
     return L
 x,n,L = nhap()
-print(Bai3(L,x))
+print(delete(L,x))

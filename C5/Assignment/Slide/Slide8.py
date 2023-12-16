@@ -8,4 +8,3 @@ print(char)
 # list index out of range có nghĩa là khi phần tử không được tìm thấy trong list đó
 # không được sử dụng số thực
 # Th list nằm trong list
-whhwhw
