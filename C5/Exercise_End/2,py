@@ -1,0 +1,23 @@
+def Input():
+    L = []
+    n = int(input('n='))
+    if n > 0:
+        for i in range(1, n + 1):
+            L.append(int(input()))
+        return L, n
+    else:
+        return None
+
+def Search(L):
+    L.sort()
+    return L
+
+def Output(min, max):
+    print(max, min)
+
+result = Input()
+if result is not None:
+    L, n = result
+    sorted_list = Search(L)
+    min_val, max_val = sorted_list[0], sorted_list[-1]
+    Output(min_val, max_val)

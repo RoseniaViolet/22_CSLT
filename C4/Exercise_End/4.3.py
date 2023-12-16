@@ -18,7 +18,6 @@ def giaipt(a, b, c):
         x2 = -b / (2*a)
         return x1, x2
     else:
-        print(f'Phuong trinh vo nghiem')
         # Return some indicator (e.g., None) for no real roots
         return None
 
