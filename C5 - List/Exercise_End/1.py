@@ -8,10 +8,12 @@ def Input():
         return L, x, n
     else:
         return None
+    
 def FirstAndLast(L):
     result = [L[0], L[-1]]
     print(result)
     return result
+
 def Search(L, x):
     for i in range(len(L)):
         if x == L[i]:
@@ -22,7 +24,7 @@ input_result = Input()
 if input_result is not None:
     L, x, n = input_result
     result_list = FirstAndLast(L)
-    print(Search(result_list, x))
+    print(Search(L, x))
 else:
     print("Không có giá trị hợp lệ từ hàm Input.")
 
