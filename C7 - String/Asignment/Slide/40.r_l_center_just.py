@@ -1,10 +1,19 @@
-items = []
+TenHang=[]
+SoLuong=[]
+#Nhap ten hang va so luong
+print("Moi nhap ten hang va so luong: ")
+for i in range(0,4): # i=(0,1,2,3)
+    print("+ Mat hang",i+1,":")
+    ten=input(" - Ten hang:")
+    TenHang.append(ten)
+    sl=input(" - So luong:")    
+    SoLuong.append(sl)
 for i in range(4):
-    name = str(input())
-    quantity = input()
-    items.append((name,quantity))
-for name,quantity in items:
-    print(f'{name.ljust(20,".")}{quantity.rjust(6," ")}')
+    a = TenHang[i].ljust(20,'.')
+    b = SoLuong[i].rjust(6,' ')
+    print(a,end='')
+    print(b)
+
     
     
     

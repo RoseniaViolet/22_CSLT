@@ -1,45 +1,37 @@
-def Nhap_2sothuc(a, b):
-    a = float(a)
-    b = float(b)
-    return a, b
+def Nhap():
+    a = float(input('a = '))
+    b = float(input('b = '))
+    x = input('ToanTu: ')
+    return a, b, x
 
-def Nhap_Kytu(Kytu):
-    if Kytu in ['+', '-', '*', '/']:
-        return Kytu
-    return None
+def KiemtraToanTu(x):
+    return x in ['+', '-', '*', '/']
 
-def Tinh_toan():
-    result = None
-    a, b = Nhap_2sothuc(input('a='), input('b='))
-    operator = Nhap_Kytu(input('Toan_tu:'))
-    
-    if operator is None:
-        print('Ký tự không hợp lệ')
-        return None
-    
-    if operator == '+':
-        result = a + b
-    elif operator == '-':
-        result = a - b
-    elif operator == '*':
-        result = a * b
-    elif operator == '/':
+def TinhToan(a, b, x):
+    kq = None  # Đặt giá trị mặc định cho kq
+    if x == '+':
+        kq = a + b 
+    elif x == '-':
+        kq = a - b
+    elif x == '*':
+        kq = a * b
+    elif x == '/':
         try:
-            result = a / b
+            kq = a / b
         except ZeroDivisionError:
-            print('Error: Chia cho 0')
-            return None  
-    return f'{a}{operator}{b}={result}'
+            print('Khong the chia cho 0')
+    return kq
 
-def Loop():
-    while True:
-        check = Tinh_toan()
-        if check is not None:
-            print(check)
-        Continue = input('Tiếp tục:')
-        if Continue.upper() != 'T':
-            break
-
-Loop()
-
-    
+# maincode
+while True:
+    a, b, x = Nhap()
+    check = KiemtraToanTu(x)
+    if check is True:
+        kq = TinhToan(a, b, x)
+        if kq is not None:
+            print(f'{a} {x} {b} = {kq}')
+    else:
+        print('Toan tu khong hop le')
+    TT = input('Tieptuc:')
+    if TT.lower() != 't':
+        break

@@ -1,5 +1,6 @@
 st = 'AbbaTheAbbaSongsAbab'
-print(st.lstrip('ab'))
+print(st.rstrip('ba'))
+
 
 
 

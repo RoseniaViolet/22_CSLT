@@ -9,15 +9,15 @@ def Input():
         return None
 
 def Search(L):
-    L.sort()
-    return L
+    Max = max(L)
+    Min = min(L)
+    return Max,Min
 
-def Output(min, max):
-    print(max, min)
+def Output(Max,Min):
+    print(Max, Min)
 
 result = Input()
 if result is not None:
     L, n = result
-    L = Search(L)
-    min, max = L[0], L[-1]
-    Output(min, max)
+    Max,Min = Search(L)
+    Output(Max,Min)

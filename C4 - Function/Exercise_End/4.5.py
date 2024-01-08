@@ -1,6 +1,4 @@
 def LaSoNguyenTo(x):
-    if x <= 1:
-        return False
     for i in range(2, x):
         if x % i == 0:
             return False
@@ -22,6 +20,7 @@ def NhapVaDem():
                 break
             if LaSoNguyenTo(x) == True:
                 kq += 1
+                
         except ValueError:
             print("Invalid input. Please enter a valid integer.")
 
