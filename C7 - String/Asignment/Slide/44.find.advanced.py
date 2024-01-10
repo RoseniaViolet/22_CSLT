@@ -3,6 +3,8 @@
 st1="banana"
 st2="na"
 
+# print(st1.count(st2))
+
 st1=input("st1: ").lower()
 st2=input("st2: ").lower()
 dem=0

@@ -7,7 +7,9 @@ Ngổn-ngang---trăm-mối---bên---lòng----
 lines = text.split('\n')
 for i in range(len(lines)):
     lines[i] = lines[i].replace('-', ' ')
+    print(lines)
     lines[i] = lines[i].split()
+    print(lines)
     lines[i] = ' '.join(lines[i])
 print(lines)
 text = '\n'.join(lines)
