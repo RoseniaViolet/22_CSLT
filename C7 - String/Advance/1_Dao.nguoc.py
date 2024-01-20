@@ -21,7 +21,7 @@ def XuLyChuoi(s):
     reverse = s[::-1]
     return reverse
 def Inkq(a,b,s):
-    print(s[a:b+1:1])
+    print(s[a:b+1])
 a,b,s = nhap()
 reverse = XuLyChuoi(s)
 Inkq(a,b,reverse)
