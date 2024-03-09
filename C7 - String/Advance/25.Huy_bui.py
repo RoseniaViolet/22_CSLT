@@ -4,3 +4,5 @@ for i in range(len(a)):
         a = a.replace(a[i],' ')
 a = a.split()
 print(len(a))
+x =[]
+x.count
